@@ -26,13 +26,13 @@ app.delete("/notes/:id",(req,res)=>{
     })
 })
 
-// app.patch("/notes/:id",(req,res)=>{
-//     const id = req.params.id
-//     const titel = req.body.titel
-//     notes[id].titel = titel
-//     res.status(202).json({
-//         message:"Note Updated"
-//     })
-// })
+app.patch("/notes/:id",(req,res)=>{
+    const id = req.params.id
+    const titel = req.body.titel
+    notes[id].titel = titel
+    res.status(202).json({
+        message:"Note Updated"
+    })
+})
 
 module.exports = app;
